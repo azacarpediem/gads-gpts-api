@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키워드 볼륨 검색</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>키워드 볼륨 검색</h1>
+        <div class="search-box">
+            <input type="text" id="keyword" placeholder="검색할 키워드를 입력하세요">
+            <button id="search-btn">검색</button>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>검색 중입니다...</p>
+        </div>
+        
+        <div id="results" class="hidden">
+            <h2>검색 결과</h2>
+            <p id="result-count"></p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>키워드</th>
+                            <th>월 검색량</th>
+                            <th>경쟁도</th>
+                            <th>CPC (원)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                        <!-- 결과가 여기에 동적으로 채워집니다 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="error-message" class="hidden">
+            <p>오류가 발생했습니다. 다시 시도해주세요.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
